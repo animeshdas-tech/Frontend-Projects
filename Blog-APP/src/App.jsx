@@ -24,11 +24,13 @@ function App() {
     })
   },[])
   return(
-    <>
-    <Header/>
-      <Outlet/>
-    <Footer/> 
-    </>
+    <div className='border-slate-500 border-8 rounded-2xl h-screen w-screen fixed top-0 left-0 overflow-auto'>
+        <Header/>
+          <div className=' '>
+            <Outlet/>
+          </div>
+        <Footer/> 
+    </div>
   )
 }
 

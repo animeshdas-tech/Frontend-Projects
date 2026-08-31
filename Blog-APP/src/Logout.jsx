@@ -12,7 +12,7 @@ function Logout() {
         })
     }
   return (
-    <Button onClick={logoutHandeler}>Logout</Button>
+    <Button className=' hover:text-red-600' onClick={logoutHandeler}>Logout</Button>
   )
 }
 
