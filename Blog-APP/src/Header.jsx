@@ -40,23 +40,21 @@ function Header() {
         }
     ]
     return (
-        <header className='fixed w-full '>
-            <ul className='flex bg-slate-300'>
-                <div className='fixed bottom-0 md:relative w-full'>
-                    <div className='absolute bottom-2 md:bottom-0 justify-between md:justify-center items-center w-full flex bg-slate-300'>
+        <header className='md:py-2'>
+            <ul className='flex bg-white'>
+                    <div className='flex absolute md:top-2 justify-between bottom-0 w-full md:w-fit bg-white md:bg-transparent h-20'>
                         {
                             nevitems.map((item) => (
                                 item.active ? <li key={item.name}>
-                                    <Button className=' hover:text-green-600' onClick={() => nevigate(item.slug)}>
+                                    <Button className=' hover:text-green-600 ' onClick={() => nevigate(item.slug)}>
                                         {item.name}
                                     </Button>
                                 </li> : null
                             ))
                         }
                     </div>
-                </div>
                 {
-                    authStatus && (<li className='ml-auto'>
+                    authStatus && (<li className='ml-auto h-20 md:h-fit'>
                         <Logout />
                     </li>)
                 }
