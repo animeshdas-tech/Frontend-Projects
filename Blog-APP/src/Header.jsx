@@ -46,11 +46,11 @@ function Header() {
     return (
         <header className='md:py-2'>
             <nav className='bg-white w-11/12 mx-auto flex justify-between'>
-                <div className='flex my-auto md:w-fit w-5/12'>
+                <div className='flex my-auto md:w-fit w-1/2'>
                     <div className=''>
-                        <img src='/mindScroll.svg' alt="Logo" className="lg:size-16 md:size-12 size-9 pr-1"/>
+                        <img src='/mindScroll.svg' alt="Logo" className="lg:size-16 md:size-12 size-10 pr-1"/>
                     </div>
-                    <div className='font-serif font-medium text-green-900 lg:text-5xl md:text-4xl border-black border-l-2 pl-1 text-2xl my-auto'>
+                    <div className='font-serif font-medium text-green-900 lg:text-5xl md:text-4xl border-black border-l-2 pl-1 text-3xl my-auto'>
                         MindScroll
                     </div>
                 </div>
