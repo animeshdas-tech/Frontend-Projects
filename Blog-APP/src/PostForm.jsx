@@ -12,7 +12,7 @@ export default function PostForm({post}) {
       title:post?.title||'',
       content:post?.content||'',
       slug:post?.slug||''
-    }})
+    }})  
     const userData=useSelector((state)=>state.Auth.userData)?.uid
     const navigate=useNavigate()
     const submit=async(data)=>{
@@ -74,7 +74,7 @@ export default function PostForm({post}) {
           lable='Content'
           name='content'
           control={control}
-          defaultValues={getValues('content')}
+          defaultValue={getValues('content')}
         />
       </div>
       <div>

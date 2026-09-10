@@ -8,8 +8,6 @@ import Button from './Button'
 function Header() {
     const authStatus = useSelector((state) => state.Auth.status)
     const userData=useSelector((state)=>state.Auth.userData)
-    console.log(userData);
-    
     const nevigate = useNavigate()
     const nevitems = [
         {
@@ -74,7 +72,7 @@ function Header() {
                         <div className='lg:inline font-serif text-green-900 hidden font-bold'>
                             wellcome, {userData.displayName}
                         </div>
-                        <img src={userData.photoURL} alt="Profile Picture" className='lg:inline hidden lg:size-16 rounded-full mx-2'/>
+                        <img src={userData.photoURL} alt="Profile Picture" className='lg:inline hidden lg:size-16 rounded-full mx-2 object-cover'/>
                         <Logout />
                     </li>)
                 }

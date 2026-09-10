@@ -23,7 +23,16 @@ function Home() {
   return authStatus ? (
     <div>
       <Container>
-        <div>
+        <div className='font-serif font-medium text-3xl text-left mt-2'>
+          Editor's Picks
+        </div>
+        <div className='md:hidden text-left mt-2'>
+          Curated thoughts for the focused mind.
+        </div>
+        <div className='hidden md:block text-left mt-2'>
+          A curated selection of our finest long-form essays & deep dives for your focused reading time.
+        </div>
+        <div className='md:grid md:grid-cols-3 md:gap-10'>
           {
             Allposts.map((post)=>(
               <div key={post.id}>
