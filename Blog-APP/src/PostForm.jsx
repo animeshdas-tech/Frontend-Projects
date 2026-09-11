@@ -6,6 +6,7 @@ import survice from './Config'
 import Input from './Input'
 import RTE from './RTE'
 import Button from './Button'
+import LoginLayout from './LoginLayout'
 
 export default function PostForm({post}) {
     const {register,setValue,handleSubmit,getValues,control,watch}=useForm({defaultValues:{
@@ -56,7 +57,7 @@ export default function PostForm({post}) {
       })
       return ()=>subscribtion.unsubscribe()
     },[watch,slugTransform,setValue])
-  return (
+  return userData ? (
     <form onSubmit={handleSubmit(submit)}>
       <div>
         <Input
@@ -94,5 +95,9 @@ export default function PostForm({post}) {
         </Button> 
       </div>
     </form>
+  ) : (
+    <div>
+      <LoginLayout/>
+    </div>
   )
 }

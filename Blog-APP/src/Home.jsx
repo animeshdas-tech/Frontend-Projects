@@ -20,7 +20,7 @@ function Home() {
       }
     })
   },[])
-  return authStatus ? (
+  return (
     <div>
       <Container>
         <div className='font-serif font-medium text-3xl text-left mt-2'>
@@ -43,8 +43,6 @@ function Home() {
         </div>
       </Container>
     </div>
-  ) : (
-    <p>Please Login</p>
   )
 }
 

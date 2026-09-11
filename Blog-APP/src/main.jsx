@@ -15,6 +15,7 @@ import PostFunctions from './PostFunctions.jsx'
 import EditPost from './EditPost.jsx'
 import MyAccount from './MyAccount.jsx'
 import EditProfile from './EditProfile.jsx'
+import Logout from './Logout.jsx'
 
 const router=createBrowserRouter([
   {
@@ -60,7 +61,11 @@ const router=createBrowserRouter([
       {
         path:'/editProfile',
         element:<EditProfile/>
-      }
+      },
+      // {
+      //   path: '/Logout',
+      //   element:<Logout/>
+      // }
     ]
   }
 ])

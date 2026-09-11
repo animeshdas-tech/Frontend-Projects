@@ -5,12 +5,11 @@ import { logout } from './AuthSlice'
 import Button from './Button'
 
 function Logout() {
-    const dispatch=useDispatch()
-    const logoutHandeler=()=>{
+  const dispatch = useDispatch()
+   const logoutHandeler=()=>{
         authentication.signout().then(()=>{
             dispatch(logout())
-        })
-    }
+        })}
   return (
     <Button className=' text-red-700' onClick={logoutHandeler}>Logout</Button>
   )

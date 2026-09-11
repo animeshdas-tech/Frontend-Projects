@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import survice from './Config'
 import Container from './Container'
 import Post from './Post'
+import LoginLayout from './LoginLayout'
 
 function AllPosts() {
      const userData=useSelector((state)=>state.Auth.userData)
@@ -14,7 +15,8 @@ function AllPosts() {
             }
         })
      },[userData])
-  return (
+     
+  return userData ? (
     <div>
         <Container>
             <div>
@@ -27,6 +29,10 @@ function AllPosts() {
                 }
             </div>
         </Container>
+    </div>
+  ) : (
+    <div>
+       <LoginLayout/>
     </div>
   )
 }
