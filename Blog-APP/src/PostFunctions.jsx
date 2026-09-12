@@ -35,26 +35,29 @@ function PostFunctions() {
     }
   return post?(
     <div>
-      <Container>
-        <img src={post.featuredimage} alt={post.title} />
+      <Container className=''>
+        <div className='font-serif font-medium text-justify text-2xl md:w-4/5 mx-auto'>
+          {post.title}
+        </div>
         {
           isAuthor && (
-            <div>
+            <div className='bg-slate-200 rounded-lg flex justify-center gap-3 py-3 my-6 md:w-4/5 mx-auto'>
               <Link to={`/editPost/${post.uid}/${post.id}`}>
-              <Button>
+              <Button className='bg-slate-300 hover:bg-slate-400 text-green-900'>
                 Edit
               </Button>
               </Link>
-              <Button onClick={deletePost}>
+              <Button onClick={deletePost} className='bg-slate-300 hover:bg-red-200  text-red-700 hover:text-red-700'>
                 Delete
               </Button>
             </div>
           )
         }
-        <div>
-          <h2>{post.title}</h2>
+        <img src={post.featuredimage} alt={post.title} className='rounded-lg mt-6'/>
+        
+        <div className='text-justify my-6 md:w-3/5 mx-auto'>
+          {parse(post.content)}
         </div>
-        <div>{parse(post.content)}</div>
       </Container>
     </div>
   ):null

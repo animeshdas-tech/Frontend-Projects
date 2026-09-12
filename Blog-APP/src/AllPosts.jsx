@@ -17,9 +17,9 @@ function AllPosts() {
      },[userData])
      
   return userData ? (
-    <div>
+    <div className=''>
         <Container>
-            <div>
+            <div className='md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10'>
                 {
                     posts.map((post)=>(
                         <div key={post.id}>

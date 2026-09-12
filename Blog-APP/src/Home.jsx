@@ -32,7 +32,7 @@ function Home() {
         <div className='hidden md:block text-left mt-2'>
           A curated selection of our finest long-form essays & deep dives for your focused reading time.
         </div>
-        <div className='md:grid md:grid-cols-3 md:gap-10'>
+        <div className='md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10'>
           {
             Allposts.map((post)=>(
               <div key={post.id}>

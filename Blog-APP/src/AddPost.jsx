@@ -4,7 +4,7 @@ import PostForm from './PostForm'
 
 function AddPost() {
   return (
-    <div>
+    <div className=''>
       <Container>
         <PostForm/>
       </Container>

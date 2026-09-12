@@ -13,7 +13,7 @@ function MyAccount() {
     })
   }, [])
   return userData ? (
-    <div>
+    <div className=''>
        <Container>
         <div>
           <Profile {...userData}/>

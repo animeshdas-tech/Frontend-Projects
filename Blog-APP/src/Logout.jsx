@@ -11,7 +11,7 @@ function Logout() {
             dispatch(logout())
         })}
   return (
-    <Button className=' text-red-700' onClick={logoutHandeler}>Logout</Button>
+    <Button className=' text-red-700 hover:text-red-700 hover:bg-red-200' onClick={logoutHandeler}>Logout</Button>
   )
 }
 

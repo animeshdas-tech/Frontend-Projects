@@ -48,7 +48,7 @@ function Header() {
                             {
                                 nevitems.map((item) => (
                                     item.active ? <li key={item.name}>
-                                        <Button className=' hover:text-green-900 focus:text-green-900 focus:bg-slate-200' onClick={() => nevigate(item.slug)}>
+                                        <Button className=' focus:text-green-900 focus:bg-slate-200' onClick={() => nevigate(item.slug)}>
                                             {item.name}
                                         </Button>
                                     </li> : null
