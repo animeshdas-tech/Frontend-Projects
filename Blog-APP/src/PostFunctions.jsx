@@ -54,7 +54,6 @@ function PostFunctions() {
           )
         }
         <img src={post.featuredimage} alt={post.title} className='rounded-lg mt-6'/>
-        
         <div className='text-justify my-6 md:w-3/5 mx-auto'>
           {parse(post.content)}
         </div>

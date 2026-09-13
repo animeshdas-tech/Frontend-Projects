@@ -42,13 +42,13 @@ function Header() {
                         MindScroll
                     </div>
                 </div>
-                <ul className='flex justify-center '>
-                    <div className='absolute md:top-3 justify-between bottom-0 w-full left-0 md:relative md:w-fit bg-white md:bg-transparent h-20'>
-                        <div className='w-fit mx-auto flex h-full '>
+                <ul className=''>
+                    <div className='absolute justify-between bottom-0 w-full left-0 lg:relative lg:w-fit bg-white lg:bg-transparent h-20'>
+                        <div className='w-fit mx-auto flex h-full items-center '>
                             {
                                 nevitems.map((item) => (
                                     item.active ? <li key={item.name}>
-                                        <Button className=' focus:text-green-900 focus:bg-slate-200' onClick={() => nevigate(item.slug)}>
+                                        <Button className=' focus:text-green-900' onClick={() => nevigate(item.slug)}>
                                             {item.name}
                                         </Button>
                                     </li> : null
@@ -59,14 +59,19 @@ function Header() {
                 </ul>
                 <div className='my-auto h-20 md:h-fit'>
                     {
-                        authStatus ? (<div className='h-full'>
-                            <div className='lg:inline font-serif text-green-900 hidden font-bold'>
+                        authStatus ? <div className='h-full'>
+                            <div className='md:inline font-serif text-green-900 hidden font-bold'>
                                 Wellcome, {userData.displayName}
                             </div>
-                            <img src={userData.photoURL} alt="Profile Picture" className='lg:inline hidden lg:size-16 rounded-full mx-2 object-cover' />
+                               {
+                                    userData.photoURL ? <img src={userData.photoURL} alt="Profile Picture" className='md:inline hidden md:size-16 rounded-full mx-2 object-cover' />  
+                                    : <div className='md:inline-block hidden font-serif font-medium text-green-100 text-5xl size-16 rounded-full bg-green-900 mx-2'>
+                                        {userData.displayName.charAt(0)}
+                                    </div>
+                                } 
                             <Logout />
-                        </div>) : <div className='h-full'>
-                            <div className='lg:inline font-serif text-green-900 hidden font-bold mr-2'>
+                        </div> : <div className='h-full'>
+                            <div className='md:inline font-serif text-green-900 hidden font-bold mr-2'>
                                 Wellcome to MindScroll
                             </div>
                             <Button className='bg-green-700 md:hover:bg-green-700 text-green-100 border-4 md:rounded-lg rounded-3xl border-white md:border-none' onClick={() => nevigate('/Login')}>
