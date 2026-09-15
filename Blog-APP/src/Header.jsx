@@ -16,7 +16,7 @@ function Header() {
             active: true
         },
         {
-            name: 'Add Post',
+            name: 'Create',
             slug: '/AddPost',
             active: true
         },
@@ -26,7 +26,7 @@ function Header() {
             active: true
         },
         {
-            name: 'My Account',
+            name: 'Account',
             slug: '/MyAccount',
             active: true
         }
@@ -44,10 +44,10 @@ function Header() {
                 </div>
                 <ul className=''>
                     <div className='absolute justify-between bottom-0 w-full left-0 lg:relative lg:w-fit bg-white lg:bg-transparent h-20'>
-                        <div className='w-fit mx-auto flex h-full items-center '>
+                        <div className='flex h-full items-center'>
                             {
                                 nevitems.map((item) => (
-                                    item.active ? <li key={item.name}>
+                                    item.active ? <li key={item.name} className='mx-auto'>
                                         <Button className=' focus:text-green-900' onClick={() => nevigate(item.slug)}>
                                             {item.name}
                                         </Button>
@@ -59,13 +59,13 @@ function Header() {
                 </ul>
                 <div className='my-auto h-20 md:h-fit'>
                     {
-                        authStatus ? <div className='h-full'>
+                        authStatus ? <div className='h-full flex items-center'>
                             <div className='md:inline font-serif text-green-900 hidden font-bold'>
                                 Wellcome, {userData.displayName}
                             </div>
                                {
                                     userData.photoURL ? <img src={userData.photoURL} alt="Profile Picture" className='md:inline hidden md:size-16 rounded-full mx-2 object-cover' />  
-                                    : <div className='md:inline-block hidden font-serif font-medium text-green-100 text-5xl size-16 rounded-full bg-green-900 mx-2'>
+                                    : <div className='md:inline-flex items-center justify-center hidden font-serif font-medium text-green-100 text-5xl size-16 rounded-full bg-green-900 mx-2'>
                                         {userData.displayName.charAt(0)}
                                     </div>
                                 } 

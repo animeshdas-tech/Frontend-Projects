@@ -43,11 +43,11 @@ function PostFunctions() {
           isAuthor && (
             <div className='bg-slate-200 rounded-lg flex justify-center gap-3 py-3 my-6 md:w-4/5 mx-auto'>
               <Link to={`/editPost/${post.uid}/${post.id}`}>
-              <Button className='bg-slate-300 hover:bg-slate-400 text-green-900'>
+              <Button className='bg-slate-300 lg:hover:bg-slate-400 text-green-900'>
                 Edit
               </Button>
               </Link>
-              <Button onClick={deletePost} className='bg-slate-300 hover:bg-red-200  text-red-700 hover:text-red-700'>
+              <Button onClick={deletePost} className='bg-slate-300 lg:hover:bg-red-200  text-red-700 hover:text-red-700'>
                 Delete
               </Button>
             </div>
